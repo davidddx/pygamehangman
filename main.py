@@ -272,7 +272,7 @@ def gameloop():
         guessedimg = font.render('guessed: ' + guessedstring, 1, (0,0,0));
         categoryimg = font.render('Genre: ' + globals.category, 1, (0,0,0));
         screen.blit(livesimg, (64, 3));
-        screen.blit(guessimg, (screenwidth/2, screenheight/2));
+        screen.blit(guessimg, (140, screenheight/2));
         screen.blit(guessedimg, (300,400))
         screen.blit(categoryimg, (300, 0))
         globals.timenow = pygame.time.get_ticks();
@@ -287,5 +287,4 @@ def gameloop():
         pygame.display.update();
 
 if __name__ == '__main__':
-
     gameloop();
