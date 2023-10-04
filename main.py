@@ -217,7 +217,7 @@ def winnerscreen():
 def startgame():
     globals.lives = len(globals.hangmanstates) - 1;
     globals.word = words.getword();
-    globals.guess = words.generateguessString(globals.word);
+    globals.guess = generateguessString(globals.word);
     globals.category = words.getcategory(globals.word);
     globals.guessed = [];
 
@@ -240,13 +240,14 @@ def gameloop():
         pygame.image.load(projectdirectory + '/images/hangman7.png'), #gameover
     ];
     globals.hangmanstates = hangmanstates;
-    globals.lives = len(hangmanstates) - 1;
-    lives = globals.lives;
-    globals.word = words.getword();
-    globals.guess = words.generateguessString(globals.word);
-    globals.category = words.getcategory(globals.word);
+    startgame()
+    # globals.lives = len(hangmanstates) - 1;
+    # lives = globals.lives;
+    # globals.word = words.getword();
+    # globals.guess = words.generateguessString(globals.word);
+    # globals.category = words.getcategory(globals.word);
 
-    currentimage = hangmanstates[len(hangmanstates) - 1 - lives];
+    currentimage = hangmanstates[len(hangmanstates) - 1 - globals.lives];
 
     cooldown = 500 #milliseconds
     while running:
@@ -285,6 +286,21 @@ def gameloop():
         if (globals.lives == 0):
             loserscreen();
         pygame.display.update();
+
+def generateguessString(word):
+    idx = 0;
+    guessString = "";
+    for letter in word:
+        if(letter != ' '):
+
+            guessString = guessString + '_'
+        else:
+            guessString = guessString + ' ';
+
+        guessString = guessString + ' ';
+
+        idx+=1;
+    return str(guessString);
 
 if __name__ == '__main__':
     gameloop();

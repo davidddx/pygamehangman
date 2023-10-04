@@ -10,7 +10,11 @@ country = "country";
 poem = "poem";
 rapper = "rapper";
 boxer = "boxer";
-
+college = "college";
+animal = "animal";
+technology = "technology"
+language = "language"
+programminglanguage = "programming language"
 wordDictionary = {
     "laos": country,
     "cambodia": country,
@@ -18,6 +22,15 @@ wordDictionary = {
     "canada": country,
     "cuba": country,
     "dominican republic": country,
+    "jamaica": country,
+    "belize": country,
+    "somalia": country,
+    "ethiopia": country,
+    "egypt": country,
+    "russia": country,
+    "china": country,
+    "north korea": country,
+    "south korea": country,
     "panama": country,
     "haiti": country,
     "lebanon": country,
@@ -32,6 +45,17 @@ wordDictionary = {
     "demon slayer": anime,
     "my hero academia": anime,
     "naruto": anime,
+    "fairy tail": anime,
+    "death note": anime,
+    "attack on titan": anime,
+    "jojos bizarre adventure": anime,
+    "akame ga kill": anime,
+    "kill la kill": anime,
+    "code geass": anime,
+    "evangelion": anime,
+    "hunter x hunter": anime,
+    "blue lock": anime,
+
     "johnny test": cartoon,
     "dragon ball z": anime,
     "the godfather": movie,
@@ -83,7 +107,77 @@ wordDictionary = {
     "teen titans go": cartoon,
     "ben 10": cartoon,
     "johnny bravo": cartoon,
-
+    "florida international university": college,
+    "florida tech": college,
+    "duke": college,
+    "university of miami": college,
+    "florida atlantic university": college,
+    "yale": college,
+    "penn": college,
+    "princeton": college,
+    "harvard": college,
+    "university of georgia": college,
+    "university of florida": college,
+    "university of south florida": college,
+    "university of central florida": college,
+    "stanford": college,
+    "MIT": college,
+    "johns hopkins university": college,
+    "northwestern university": college,
+    "dog": animal,
+    "cat": animal,
+    "elephant": animal,
+    "giraffe": animal,
+    "kangaroo": animal,
+    "horse": animal,
+    "bear": animal,
+    "snake": animal,
+    "fly": animal,
+    "cockroach": animal,
+    "computer": technology,
+    "television": technology,
+    "phone": technology,
+    "central processing unit": technology,
+    "random access memory": technology,
+    "hard disk": technology,
+    "flash drive": technology,
+    "english": language,
+    "spanish": language,
+    "french": language,
+    "german": language,
+    "italian": language,
+    "sign language": language,
+    "yoruba": language,
+    "igbo": language,
+    "swahili": language,
+    "arabic": language,
+    "romanian": language,
+    "hindi": language,
+    "filipino": language,
+    "japanese": language,
+    "mandarin": language,
+    "cantonese": language,
+    "russian": language,
+    "ukranian": language,
+    "portugese": language,
+    "xhosa": language,
+    "somali": language,
+    "fortran": programminglanguage,
+    "php": programminglanguage,
+    "csharp": programminglanguage,
+    "python": programminglanguage,
+    "cpp": programminglanguage,
+    "c": programminglanguage,
+    "java": programminglanguage,
+    "javascript": programminglanguage,
+    "rust": programminglanguage,
+    "sql": programminglanguage,
+    "html": programminglanguage,
+    "css": programminglanguage,
+    "lua": programminglanguage,
+    "ti basic": programminglanguage,
+    "swift": programminglanguage,
+    "kotlin": programminglanguage,
 }
 
 def getword():
@@ -98,19 +192,5 @@ def getcategory(word):
     category = wordDictionary[word];
     return category;
 
-def generateguessString(word):
-    idx = 0;
-    guessString = "";
-    for letter in word:
-        if(letter != ' '):
-
-            guessString = guessString + '_'
-        else:
-            guessString = guessString + ' ';
-
-        guessString = guessString + ' ';
-
-        idx+=1;
-    return str(guessString);
 
 
