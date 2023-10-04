@@ -175,7 +175,7 @@ def newgameloop(word, category):
                 timegameended = timenow;
                 break;
     drew = false;
-    while timenow - timegameended < 3000:
+    while timenow - timegameended < 3000: #put screen up for 3 seconds
         key = pygame.key.get_pressed();
         timenow = pygame.time.get_ticks();
         if not drew: #makes sure to not draw this every frame
