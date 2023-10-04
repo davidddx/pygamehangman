@@ -156,7 +156,7 @@ def newgameloop(word, category):
         else:
             gameended = true;
             if timenow - timegamelaststarted < 1000:
-                if gameended:
+                if gameended:  #entering restart phase
 
                     gameended = false;
 
