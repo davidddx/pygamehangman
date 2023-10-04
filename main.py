@@ -178,7 +178,7 @@ def newgameloop(word, category):
     while timenow - timegameended < 3000:
         key = pygame.key.get_pressed();
         timenow = pygame.time.get_ticks();
-        if not drew:
+        if not drew: #makes sure to not draw this every frame
             screen.fill((180, 180, 180));
             fonttype = "Times New Roman";
             fontsize = 25;
