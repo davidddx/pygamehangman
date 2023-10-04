@@ -177,12 +177,13 @@ def winnerscreen():
     print("you win");
     timenow = pygame.time.get_ticks();
     timelost = timenow;
-    stayfor = 5000;
+    stayfor = 3000;
     fonttype = "Times New Roman";
     fontsize = 100;
     font = pygame.font.SysFont(fonttype, fontsize);
-    youlose = font.render('you won!',1,(0,0,0))
-    globals.screen.blit(youlose, (10,400))
+    youwin = font.render('you win!',1,(0,0,0))
+    globals.screen.blit(youwin, (10,400))
+    print(globals.guess)
     pygame.display.update();
     while true:
         if timenow - timelost > 1000:
@@ -264,7 +265,8 @@ def gameloop():
         guessedstring = "";
         for aletter in globals.guessed:
             guessedstring = guessedstring + aletter + ',' ;
-
+        if globals.timenow - globals.timelastpressed >= cooldown:
+            inputmap(key);
         livesimg = font.render('guesses left: ' + str(globals.lives), 1, (0, 0, 0));
         guessimg = font.render(globals.guess, 1, (0,0,0));
         guessedimg = font.render('guessed: ' + guessedstring, 1, (0,0,0));
@@ -274,8 +276,6 @@ def gameloop():
         screen.blit(guessedimg, (300,400))
         screen.blit(categoryimg, (300, 0))
         globals.timenow = pygame.time.get_ticks();
-        if globals.timenow - globals.timelastpressed >= cooldown:
-            inputmap(key);
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
