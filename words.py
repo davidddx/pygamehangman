@@ -125,7 +125,7 @@ wordDictionary = {
     "nicki minaj": rapper,
     "cardi b": rapper,
     "floyd mayweahther": boxer,
-    "wonder over younder": cartoon,
+    "wonder over yonder": cartoon,
     "phineas and ferb": cartoon,
     "jay z": rapper,
     "tupac": rapper,
