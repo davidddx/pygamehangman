@@ -136,7 +136,7 @@ def loserscreen():
     print("you lose");
     timenow = pygame.time.get_ticks();
     timelost = timenow;
-    stayfor = 3000;
+    stayfor = 5000;
     fonttype = "Times New Roman";
     fontsize = 100;
     font = pygame.font.SysFont(fonttype, fontsize);
@@ -152,7 +152,7 @@ def loserscreen():
     font = pygame.font.SysFont(fonttype, fontsize);
     timebreak = timenow;
     globals.screen.fill((180, 180, 180));
-    playagain = font.render('if you to play, wait 3 seconds. otherwise press esc', 1, (0, 0, 0))
+    playagain = font.render('if you to play, wait 5 seconds. otherwise press esc', 1, (0, 0, 0))
     globals.screen.blit(playagain, (10, 400))
     pygame.display.update();
     clock = pygame.time.Clock();
@@ -177,7 +177,7 @@ def winnerscreen():
     print("you win");
     timenow = pygame.time.get_ticks();
     timelost = timenow;
-    stayfor = 3000;
+    stayfor = 5000;
     fonttype = "Times New Roman";
     fontsize = 100;
     font = pygame.font.SysFont(fonttype, fontsize);
@@ -194,7 +194,7 @@ def winnerscreen():
     font = pygame.font.SysFont(fonttype, fontsize);
     timebreak = timenow;
     globals.screen.fill((180, 180, 180));
-    playagain = font.render('if you want to play, wait 3 seconds. otherwise, press esc', 1, (0, 0, 0))
+    playagain = font.render('if you want to play, wait 5 seconds. otherwise, press esc', 1, (0, 0, 0))
     globals.screen.blit(playagain, (10, 400))
     pygame.display.update();
     clock = pygame.time.Clock();
