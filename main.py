@@ -8,6 +8,7 @@ true = True;
 
 projectdirectory = os.getcwd();
 
+#functions have name new because i redid this code
 def newinputmap(key):
     if key[pygame.K_ESCAPE]:
         pygame.quit();
@@ -88,6 +89,7 @@ def newinputmap(key):
         return '0'
     else:
         return None
+
 def newgameloop(word, category):
     # print('newgameloop')
     pygame.init();
