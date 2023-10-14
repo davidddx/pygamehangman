@@ -165,12 +165,15 @@ def newgameloop(word, category):
                     fonttype = "Times New Roman";
                     fontsize = 100;
                     font = pygame.font.SysFont(fonttype, fontsize);
+                    wordfont = pygame.font.SysFont(fonttype, 30);
                     stringg = 0;
                     if gameresult == true:
                         stringg = font.render('you WON!', 1, (0, 0, 0))
                     else:
-                        stringg = font.render('you lost!', 1, (0, 0, 0))
+                        stringg = font.render('you lost', 1, (0, 0, 0))
+                        wordimg = wordfont.render('word was: ' + word, 1,(0,0,0))
                     screen.blit(stringg, (10, 400))
+                    screen.blit(wordimg, (10, 500))
                     pygame.display.update();
                     gameended = false;
             else:
