@@ -97,6 +97,7 @@ def newgameloop(word, category):
     screenwidth = 800;
     screenheight = 600;
     screen = pygame.display.set_mode((screenwidth, screenheight))
+
     hangmanstates = [
         pygame.image.load(projectdirectory + '/images/hangman0.png'), #7 guesses left
         pygame.image.load(projectdirectory + '/images/hangman1.png'), #6
@@ -172,8 +173,8 @@ def newgameloop(word, category):
                     else:
                         stringg = font.render('you lost', 1, (0, 0, 0))
                         wordimg = wordfont.render('word was: ' + word, 1,(0,0,0))
+                        screen.blit(wordimg, (10, 500))
                     screen.blit(stringg, (10, 400))
-                    screen.blit(wordimg, (10, 500))
                     pygame.display.update();
                     gameended = false;
             else:
